@@ -9,7 +9,6 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 import time
 import subprocess
-from download_all_pdfs import download_all_pdfs_from_src
 
 if len(sys.argv) != 3:
     print(len(sys.argv))
