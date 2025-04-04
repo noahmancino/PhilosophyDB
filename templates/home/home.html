@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <title>Noah Mancino | Personal Site</title>
+  <style>
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: transparent;
+      backdrop-filter: blur(2px);
+      z-index: 100;
+      display: flex;          /* Add flexbox */
+      justify-content: space-around; /* Even spacing */
+      padding: 1rem 0;       /* Add padding */
+      font-family: 'Inter', sans-serif; /* Modern font */
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      transition: opacity 0.2s;
+      font-family: 'Inter', sans-serif;
+    }
+
+    nav a:hover {
+        opacity: 0.8;            /* Subtle hover effect */
+    }
+
+
+
+    /* Full-screen background */
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+    }
+    #background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('meandpumpkin.jpg');
+      background-size: cover;
+      background-position: center bottom;
+      z-index: -1;
+      opacity: 0.9; /* Adjust as needed */
+    }
+
+    /* Sections */
+    section {
+      min-height: 100vh; /* Each section takes full viewport */
+      padding: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+        /* Remove full-height sections and scrolling */
+    section, main {
+      height: auto;          /* Not full-screen */
+      padding: 2rem;
+      margin-top: 4rem;      /* Push below navbar */
+    }
+
+    /* Disable scroll (optional) */
+    html, body {
+      overflow: hidden;      /* Locks scrolling */
+      height: 100%;
+    }
+
+    main {
+      max-width: 600px;      /* Adjust this to control text width */
+      margin-left: 2rem;     /* Left margin (or use padding-left) */
+      margin-right: auto;    /* Pushes content to the left */
+      text-align: left;      /* Ensures text alignment */
+    }
+
+    p {
+      word-break: normal;    /* Prevents awkward mid-word breaks */
+      overflow-wrap: break-word; /* Breaks long words if needed */
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 700;
+    }
+
+    p {
+      font-family: 'Lora', serif;
+      font-weight: 500;
+      font-size: 1.25em;
+    }
+
+    .text-container {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(3px);
+      border-radius: 12px;
+      padding: 1rem; /* Adjust padding to fit text */
+      display: inline-block; /* Shrinks to content width */
+      max-width: 600px; /* Prevents overly wide blocks */
+    }
+
+
+  </style>
+</head>
+<body>
+  <!-- Transparent Navbar -->
+  <nav>
+    <a href="/home">Home</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+  </nav>
+
+  <!-- Background Image -->
+  <div id="background"></div>
+
+
+  <main>
+    <div class="text-container">
+      <h1>Noah Mancino</h1>
+      <p>
+      I currently live in Seattle, Washington with my wife and my dog while remotely attending Georgia Institute of Technology.
+      I completed my undergraduate degree in computer science and mathematics at University of Oregon and have two years of experience as a backend web developer. <br><br> Outside of work my interests include philosophy, films, hiking, and traveling
+      </p>
+    </div>
+  </main>
+</body>
+</body>
+</html>

@@ -16,13 +16,12 @@ def download_all_pdfs_from_src(page_source, download_loc, base_pth=''):
     links = set(links)
     links = [link for link in links if link[-4:] == '.pdf']
 
-    if base_pth:
-        for i, link in enumerate(links):
-            if link[:4] != 'http':
-                links[i] = base_pth + link
-
     for link in links:
         new_file_name = link.replace('/', '_')
+        if base_pth:
+            if link[4:] != 'http':
+                link = base_pth + link
+
         file_path = download_loc + new_file_name
         print('Downloading ' + link + ' to ' + file_path)
         with open(file_path, 'wb') as f:

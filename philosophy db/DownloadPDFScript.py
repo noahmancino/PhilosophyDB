@@ -5,6 +5,7 @@ from download_all_pdfs import download_all_pdfs_from_url
 import sys
 
 if len(sys.argv) not in [3, 4]:
+    print(sys.argv)
     print("Usage: python DownloadPDFScript.py <url> <download_loc> -<base_pth>")
     sys.exit(0)
 

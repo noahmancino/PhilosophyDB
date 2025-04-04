@@ -10,16 +10,18 @@ from selenium.webdriver.chrome.options import Options
 import time
 import subprocess
 
-if len(sys.argv) != 3:
+if len(sys.argv) != 4:
     print(len(sys.argv))
     print('Usage: python GoogleScholarDownloads.py <url> <download_loc>')
 
 url = sys.argv[1]
 download_loc = sys.argv[2]
 
-# Selenium stuff is all
 chrome_options = Options()
-chrome_options.add_argument("--headless")
+# Trying to avoid rate limiting
+chrome_options.add_argument("--disable-blink-features=AutomationControlled")  # Disable automation flag
+chrome_options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36")
+chrome_options.add_argument("--start-maximized")  # Start in maximized mode to look more natural
 
 service = Service('/opt/homebrew/bin/chromedriver')  # Default homebrew path
 driver = webdriver.Chrome(service=service, options=chrome_options)
